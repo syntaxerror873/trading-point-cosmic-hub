@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 export const HeroSection = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       <div className="container mx-auto px-6 text-center z-10">
         <div className="max-w-4xl mx-auto space-y-8 animate-fade-in-up">
           <h1 className="text-7xl md:text-8xl lg:text-9xl font-futuristic font-black text-gradient leading-none">

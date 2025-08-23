@@ -4,42 +4,48 @@ const videos = [
   {
     id: 1,
     title: "Complete Beginner's Guide to Trading",
-    thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi/Iq9vp-DV5OA/maxresdefault.jpg",
+    videoUrl: "https://youtu.be/Iq9vp-DV5OA?si=4NJGwFZ0iKqt40qp",
     duration: "15:32",
     views: "125K"
   },
   {
     id: 2,
     title: "Advanced Technical Analysis Strategies",
-    thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi/Iq9vp-DV5OA/maxresdefault.jpg",
+    videoUrl: "https://youtu.be/Iq9vp-DV5OA?si=4NJGwFZ0iKqt40qp",
     duration: "22:18",
     views: "89K"
   },
   {
     id: 3,
     title: "Risk Management Masterclass",
-    thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi/Iq9vp-DV5OA/maxresdefault.jpg",
+    videoUrl: "https://youtu.be/Iq9vp-DV5OA?si=4NJGwFZ0iKqt40qp",
     duration: "18:45",
     views: "156K"
   },
   {
     id: 4,
     title: "Crypto Trading in 2024: What You Need to Know",
-    thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi/Iq9vp-DV5OA/maxresdefault.jpg",
+    videoUrl: "https://youtu.be/Iq9vp-DV5OA?si=4NJGwFZ0iKqt40qp",
     duration: "28:12",
     views: "203K"
   },
   {
     id: 5,
     title: "Market Psychology & Emotional Trading",
-    thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi/Iq9vp-DV5OA/maxresdefault.jpg",
+    videoUrl: "https://youtu.be/Iq9vp-DV5OA?si=4NJGwFZ0iKqt40qp",
     duration: "31:07",
     views: "178K"
   },
   {
     id: 6,
     title: "Building Your First Trading Portfolio",
-    thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+    thumbnail: "https://img.youtube.com/vi/Iq9vp-DV5OA/maxresdefault.jpg",
+    videoUrl: "https://youtu.be/Iq9vp-DV5OA?si=4NJGwFZ0iKqt40qp",
     duration: "25:43",
     views: "134K"
   }
@@ -47,7 +53,7 @@ const videos = [
 
 export const VideosSection = () => {
   return (
-    <section className="py-20 bg-surface/30 relative">
+    <section id="videos" className="py-20 bg-surface/30 relative">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-futuristic font-bold text-gradient mb-6">
@@ -60,7 +66,13 @@ export const VideosSection = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {videos.map((video) => (
-            <div key={video.id} className="group cursor-pointer">
+            <a 
+              key={video.id} 
+              href={video.videoUrl} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="group cursor-pointer"
+            >
               <div className="card-futuristic overflow-hidden hover:glow-blue transition-all duration-500 transform group-hover:scale-105">
                 <div className="relative aspect-video overflow-hidden">
                   <img 
@@ -94,7 +106,7 @@ export const VideosSection = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 

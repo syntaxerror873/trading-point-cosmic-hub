@@ -3,7 +3,7 @@ import satyendraPortrait from "@/assets/satyendra-portrait.jpg";
 
 export const AboutSection = () => {
   return (
-    <section className="py-20 relative">
+    <section id="about" className="py-20 relative">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-futuristic font-bold text-gradient mb-6">
